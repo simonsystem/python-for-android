@@ -178,7 +178,7 @@ def shprint(command, *args, **kwargs):
                     lines = [l for l in lines if not re_filter_out.search(l)]
                 if tail_n == 0 or len(lines) <= tail_n:
                     info('{}:\n{}\t{}{}'.format(
-                        name, forecolor, '\t\n'.join(str(v) for v in lines)), Out_Fore.RESET))
+                        name, forecolor, '\t\n'.join(str(v) for v in lines), Out_Fore.RESET))
                 else:
                     info('{} (last {} lines of {}):\n{}\t{}{}'.format(
                         name, tail_n, len(lines),
